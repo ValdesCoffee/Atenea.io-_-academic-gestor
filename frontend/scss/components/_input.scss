@@ -8,28 +8,44 @@
     overflow: hidden;
     display: flex;
     @include size(100%, auto);
-    @include justify-align(none,center);
+   
+    @include justify-align;
 
     border-radius: $radius-md;
-    border: 1px solid $white;
+    border: 2px solid $white;
 
     background-color: $black;
-    color: $white;
+
+    transition: $transition-fast;
 
     .login__icon{
         display: flex;
         @include justify-align;
-        @include padding(0.5rem);
+
+        @include padding(0.65rem);
         color: $white;
+        
+        svg{
+            @include size(18px, 18px);
+        }
     }
 
     input{
-        width: 100%;
-        @include padding(0.65rem);
+        @include size(100%, auto);
+
+        @include padding(0.65rem, 0.5rem);
+        color: $white;
+
         background-color: $black;
         border: none;
-        color: $white;
-                @include font-montserrat;
+        
+        @include font-montserrat;
         font-size: $font-md;
+
+        outline: none;
+    }
+
+    &:focus-within{
+        @include shadow(0, 0, 0, 4px, rgba(255, 255, 255, 0.25));
     }
 }

@@ -6,8 +6,8 @@
 
 .login__button{
     width: 100%;
-
     @include padding(0.5rem, 0.65rem);
+
     border-radius: $radius-md;
     border: none;
 
@@ -18,4 +18,12 @@
     @include font-changa;
     font-size: $font-md;
     font-weight: 500;
+
+    cursor: pointer;
+
+    transition: $transition-fast;
+
+    &:hover{
+        transform: translatey(-5px);
+    }
 }
