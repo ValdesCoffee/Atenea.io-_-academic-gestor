@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+.login__button {
+  width: 100%;
+  padding: 0.5rem 0.65rem 0.5rem 0.65rem;
+  border-radius: 12px;
+  border: none;
+  background-color: #FBFBFE;
+  color: #040316;
+  text-transform: uppercase;
+  font-family: "Changa", sans-serif;
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.login__input-group {
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: none;
+  align-items: center;
+  border-radius: 12px;
+  border: 1px solid #FBFBFE;
+  background-color: #040316;
+  color: #FBFBFE;
+}
+.login__input-group .login__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  color: #FBFBFE;
+}
+.login__input-group input {
+  width: 100%;
+  padding: 0.65rem 0.65rem 0.65rem 0.65rem;
+  background-color: #040316;
+  border: none;
+  color: #FBFBFE;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+#login {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../assents/SVG/login-background.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#login #login-container {
+  display: flex;
+  flex-direction: column;
+  width: 45vw;
+  height: 100vh;
+  background: linear-gradient(125deg, #0D0A49 0%, #040316 100%);
+  box-shadow: 4px 0 12px 0 rgba(0, 0, 0, 0.25);
+  padding: 1rem 1rem 1rem 1rem;
+}
+#login #login-container #login-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  height: 10vh;
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+}
+#login #login-container #login-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 768px) {
+  #login #login-container {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+@media (max-width: 768px) {
+  #login {
+    background: #040316;
+  }
+}
+
+#login-logo {
+  display: flex;
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+}
+
+#login-home-link {
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1;
+  font-family: "Changa", sans-serif;
+  font-style: normal;
+  font-size: 2rem;
+  color: #FBFBFE;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+}
+#login-form #login-title {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1;
+  font-family: "Changa", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 3rem;
+  color: #FBFBFE;
+}
+#login-form #login-description {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-size: 1.125rem;
+  color: #FBFBFE;
+}
+#login-form #login-role {
+  width: 100%;
+  padding: 0.65rem 0.65rem 0.65rem 0.65rem;
+  border-radius: 12px;
+  border: 1px solid #FBFBFE;
+  background-color: #040316;
+  color: #FBFBFE;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-size: 1rem;
+}
+#login-form #login-options {
+  display: flex;
+  width: 100%;
+  height: auto;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-size: 1rem;
+  color: #FBFBFE;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=style.css.map */

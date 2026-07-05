@@ -1,0 +1,35 @@
+@use "../abstracts/colores" as *;
+@use "../abstracts/gradientes" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/tipografias" as *;
+@use "../abstracts/variables" as *;
+
+.login__input-group{
+    overflow: hidden;
+    display: flex;
+    @include size(100%, auto);
+    @include justify-align(none,center);
+
+    border-radius: $radius-md;
+    border: 1px solid $white;
+
+    background-color: $black;
+    color: $white;
+
+    .login__icon{
+        display: flex;
+        @include justify-align;
+        @include padding(0.5rem);
+        color: $white;
+    }
+
+    input{
+        width: 100%;
+        @include padding(0.65rem);
+        background-color: $black;
+        border: none;
+        color: $white;
+                @include font-montserrat;
+        font-size: $font-md;
+    }
+}

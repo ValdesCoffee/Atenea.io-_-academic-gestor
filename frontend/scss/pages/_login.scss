@@ -1,0 +1,119 @@
+@use "../abstracts/colores" as *;
+@use "../abstracts/gradientes" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/tipografias" as *;
+@use "../abstracts/variables" as *;
+
+#login{
+    display: flex;
+    @include size(100vw, 100vh);
+
+    background-image: url(../assents/SVG/login-background.svg);
+    @include bg-cover;
+
+    #login-container{
+        display: flex;
+        flex-direction: column;
+        @include size(45vw, 100vh);
+
+        @include linear-gradient(125deg, #0D0A49, $black);
+        @include shadow(4px, 0, 12px, 0, rgba(0, 0, 0, .25));
+        @include padding(1rem);
+
+        #login-header{
+            display: flex;
+            @include justify-align(space-between, flex-end);
+            @include size(100%, 10vh);
+
+            @include padding(0.5rem, 1.5rem)
+        }
+
+        #login-card{
+            display: flex;
+            @include justify-align;
+            @include size(100%, 100%);
+        }
+
+        @media (max-width: 768px) {
+            @include size(100vw, 100vh);
+        }
+    }
+
+    @media (max-width: 768px) {
+        background: $black;
+    }
+}
+
+#login-logo{
+    display: flex;
+
+    @include size(auto, 100%);
+    object-fit: cover;
+}
+
+#login-home-link{
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1;
+
+    @include font-changa;
+    font-size: $font-2xl;
+    color: $white;
+}
+
+#login-form{
+    display: flex;
+    flex-direction: column;
+    @include size(50%, 100%);
+
+    @include justify-align;
+    gap: 18px;
+
+    #login-title{
+        @include size(100%, auto);
+        
+        text-align: center;
+        text-transform: uppercase;
+        line-height: 1;
+
+        @include font-changa;
+        font-weight:500;
+        font-size: $font-3xl;
+        color: $white;
+    }
+
+    #login-description{
+        @include size(100%, auto);
+        
+        text-align: center;
+        text-transform: uppercase;
+
+        @include font-montserrat;
+        font-size: $font-lg;
+        color: $white;
+    }
+
+    #login-role{
+        width: 100%;
+        @include padding(0.65rem);
+
+        border-radius: $radius-md;
+        border: 1px solid $white;
+
+        background-color: $black;
+        color: $white;
+
+        @include font-montserrat;
+        font-size: $font-md;
+    }
+
+    #login-options{
+        display: flex;
+        @include size(100%, auto);
+
+        @include font-montserrat;
+        font-size: $font-md;
+        color: $white;
+    }
+}

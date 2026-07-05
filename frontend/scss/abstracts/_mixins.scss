@@ -1,0 +1,34 @@
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin justify-align($justify:center, $align:center){
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin bg-cover {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin shadow(
+    $x: 0,
+    $y: 4px,
+    $blur: 8px,
+    $spread: 0,
+    $color: rgba(4, 3, 22, .15)
+) {
+    box-shadow: $x $y $blur $spread $color;
+}
+
+@mixin padding(
+    $top,
+    $right: $top,
+    $bottom: $top,
+    $left: $right
+) {
+    padding: $top $right $bottom $left;
+}
