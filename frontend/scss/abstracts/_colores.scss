@@ -1,13 +1,47 @@
-// ===========================
-// Colores Base
-// ===========================
+:root{
+    /* Colores generales */
+    --text: rgb(29, 21, 81);
+    --background: rgb(251, 251, 254);
+    --surface: rgb(238, 238, 238);
 
-$white: rgb(251, 251, 254);
-$black: rgb(4, 3, 22);
+    /* Paleta principal */
+    --primary: rgb(29, 21, 81);
+    --white: rgb(251, 251, 254);
+    --gray: rgb(238, 238, 238);
 
-// ===========================
-// Colores Primarios
-// ===========================
+    /* Gradiente */
+    --gradient-start: rgb(23, 17, 124);
+    --gradient-end: rgb(4, 3, 22);
 
-$primary: rgb(29, 21, 81);
-$secondary: rgb(181, 65, 250);
+    /* Calendario */
+    --calendar-weekend: rgb(232, 232, 232);
+    --task-pending: rgb(217, 217, 217);
+    --task-completed: rgb(255, 191, 0);
+}
+
+[data-theme="dark"]{
+
+    /* Colores generales */
+    --text: rgb(251, 251, 254);
+    --background: rgb(31, 31, 31);
+    --surface: rgb(43, 43, 43);
+}
+
+//==============================
+// COLORES
+//==============================
+
+$text: var(--text);
+$background: var(--background);
+$surface: var(--surface);
+
+$primary: var(--primary);
+$white: var(--white);
+$gray: var(--gray);
+
+$gradient-start: var(--gradient-start);
+$gradient-end: var(--gradient-end);
+
+$calendar-weekend: var(--calendar-weekend);
+$task-pending: var(--task-pending);
+$task-completed: var(--task-completed);

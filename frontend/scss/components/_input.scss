@@ -11,10 +11,10 @@
    
     @include justify-align;
 
-    border-radius: $radius-md;
-    border: 2px solid $white;
+    border-radius: $radius-sm;
+    border: 2px solid $gray;
 
-    background-color: $black;
+    background-color: $gradient-end;
 
     transition: $transition-fast;
 
@@ -34,18 +34,24 @@
         @include size(100%, auto);
 
         @include padding(0.65rem, 0.5rem);
-        color: $white;
+        color: $white !important;
 
-        background-color: $black;
+        background-color: $gradient-end !important;
         border: none;
         
         @include font-montserrat;
-        font-size: $font-md;
+        font-size: $font-14 !important;
 
         outline: none;
     }
 
     &:focus-within{
         @include shadow(0, 0, 0, 4px, rgba(255, 255, 255, 0.25));
+    }
+
+    &:-webkit-autofill{
+        background-color: aqua;
+        @include font-montserrat;
+        font-size: $font-14;
     }
 }

@@ -1,0 +1,184 @@
+@use "../abstracts/colores" as *;
+@use "../abstracts/gradientes" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/tipografias" as *;
+@use "../abstracts/variables" as *;
+
+body{
+    background-color: $surface;
+}
+
+#header{
+    position: fixed;
+    z-index: 1000px;
+    display: flex;
+    @include size(100vw, 70px);
+    @include padding(0,1rem,0,15vh);
+
+    background-color: $background;
+    border-bottom: 1px solid $text;
+    @include shadow(4px, 0, 10px, 0, rgba(0, 0, 0, .20));
+
+    @include justify-align(space-between,center);
+
+    .header__title{
+        display: flex;
+        @include size(auto, 100%);
+        @include justify-align(start,center);
+        @include padding(0,0,0,2rem);
+        @include padding(0.3rem,1rem);
+        gap: 7px;
+
+        @include font-changa;
+        font-weight: 400;
+        font-size: $font-18;
+        text-transform: uppercase;
+        color: $text;
+
+        cursor: default;
+        user-select: none;
+
+        .header-page-title.location{
+            text-decoration:underline;
+        }
+    }
+    .header__search{
+        display: flex;
+        @include size(30%, 100%);
+        @include justify-align(center,center);
+        @include padding(0.3rem,1rem);
+    }
+    
+}
+
+.header-page-title{
+    cursor: pointer;
+    text-decoration: none;
+
+    a{
+        text-decoration: none;
+        color: $text;
+    }
+}
+
+.header__search-box{
+    overflow: hidden;
+    display: flex;
+    @include size(100%,60%);
+    @include justify-align(center,center);
+    gap: 0.3rem;
+    
+    border: 1px solid $text;
+    border-radius: $radius-3xl;
+
+    background-color: $white;
+    color: $text;
+
+    .header__search-icon{
+        background-color: transparent;
+        line-height: 0;
+        @include padding(0.4rem,0,0.4rem,0.7rem);
+    }
+    .header__search-input{
+        background-color: transparent;
+
+        @include size(100%,100%);
+        border: none;
+        outline: none;
+
+        @include padding(0,0.4rem);
+
+        @include font-montserrat;
+        font-size: $font-14;
+        font-weight: 500;
+        color: $text;
+    }
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+.header__user{
+    display: flex;
+    @include size(flex-end,center);
+    @include padding(0.3rem,1rem);
+    gap: 20px;
+}
+
+.header__balance{
+    display: flex;
+    @include size(auto,auto);
+    @include justify-align(none,center);
+    @include padding(0.3rem);
+    gap: 5px;
+
+    border-radius: $radius-3xl;
+    border: 1px solid $text;
+
+    background-color: $background;
+
+    user-select: none;
+
+    .header__balance-icon{
+        overflow: hidden;
+        @include size(2rem,2rem);
+
+        img{
+            @include size(100%,100%);
+            object-fit: cover;
+        }
+    }
+
+    span{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        @include padding(0.3rem);
+
+        text-decoration: none;
+        @include font-montserrat;
+        font-size: $font-14;
+        font-weight: 400;
+        text-transform: capitalize;
+        color: $text;
+
+        cursor: pointer;
+    }
+}
+
+
+.header__profile{
+    display: flex;
+    @include size(auto,100%);
+    @include justify-align(none,center);
+    gap: 7px;
+
+    .header__profile-image{
+        overflow: hidden;
+        @include size(2.7rem,2.7rem);
+
+        border: 1px solid $text;
+        border-radius: $radius-3xl;
+
+        img{
+            @include size(100%,100%);
+            object-fit: cover;
+        }
+    }
+
+    a{
+        @include size(150px,auto);
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        text-decoration: none;
+        @include font-montserrat;
+        font-size: $font-16;
+        font-weight: 400;
+        text-transform: capitalize;
+        color: $text;
+    }
+}

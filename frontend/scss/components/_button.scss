@@ -6,17 +6,17 @@
 
 .login__button{
     width: 100%;
-    @include padding(0.5rem, 0.65rem);
+    @include padding(0.2rem);
 
-    border-radius: $radius-md;
+    border-radius: $radius-sm;
     border: none;
 
-    background-color: $white;
-    color: $black;
+    background-color: $gray;
+    color: $gradient-end;
 
     text-transform: uppercase;
     @include font-changa;
-    font-size: $font-md;
+    font-size: $font-20;
     font-weight: 500;
 
     cursor: pointer;

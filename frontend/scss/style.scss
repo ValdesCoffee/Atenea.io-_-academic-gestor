@@ -11,6 +11,9 @@
 @use "components/card";
 @use "components/logo";
 
+@use "loyout/header";
+@use "loyout/sidebar";
+
 @use "pages/login";
 @use "pages/home";
 
