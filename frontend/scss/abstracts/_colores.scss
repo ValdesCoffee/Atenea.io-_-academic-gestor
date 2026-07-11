@@ -1,7 +1,7 @@
 :root{
     /* Colores generales */
     --text: rgb(29, 21, 81);
-    --background: rgb(251, 251, 254);
+    --background: rgb(244, 246, 254);
     --surface: rgb(238, 238, 238);
 
     /* Paleta principal */
@@ -19,12 +19,16 @@
     --task-completed: rgb(255, 191, 0);
 }
 
-[data-theme="dark"]{
+[data-theme=dark] {
 
-    /* Colores generales */
-    --text: rgb(251, 251, 254);
-    --background: rgb(31, 31, 31);
-    --surface: rgb(43, 43, 43);
+  /* Colores generales */
+  --text: rgb(251, 251, 254);
+  --background: rgb(31, 31, 31);
+  --surface: rgb(43, 43, 43);
+
+    /* Gradiente */
+  --gradient-start: rgb(251, 251, 254);
+  --gradient-end: rgb(251, 251, 254);
 }
 
 //==============================

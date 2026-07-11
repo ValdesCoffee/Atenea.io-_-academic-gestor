@@ -17,14 +17,20 @@
     background-color: $background;
     @include shadow(0,4px,10px);
     color: $text;
+
+    transition: width 0.3s ease;
+
+    &.closed{
+        @include size(80px, 100vh);
+    }
 }
 
 #sidebar-header{
     position: relative;
     display: flex;
     @include size(100%,10vh);
-    @include justify-align(flex-start,center);
-    @include padding(0.6rem,1rem);
+    min-height: 10vh;
+    @include justify-align(center,center);
 
     background-color: $background;
     border-bottom: 1px solid $text;
@@ -34,7 +40,8 @@
     .sidebar__header-absolut{
         display: flex;
         @include size(100%,100%);
-        @include justify-align(none,center);
+        @include padding(0.6rem,1rem);
+        @include justify-align(center,center);
         gap: 0.8rem;
     }
 
@@ -51,51 +58,83 @@
         color: $text;
         cursor: pointer;
 
-        svg{
+        transition: left 0.4s ease;
+
+        #sidebar-toggle-icon{
+            rotate: 180deg;
             display: flex;
             object-fit: cover;
             @include size(2rem,2rem);
             @include justify-align(center,center);
             padding-right: 0.1rem;
             color: $background;
+
+            transition: rotate 0.5s ease;
+
+            &.closed{
+                rotate: 0deg;
+            }
+        }
+
+        &.closed{
+           left: 110%;
         }
     }
-
 }
 
 .sidebar__logo-container{
     display: flex;
-    @include size(60px,100%);
+    @include size(48px,48px);
     @include justify-align(center,center);
+    @include padding(0.5rem);
 
     @include linear-gradient-animation(120deg, $gradient-start, $gradient-end);
     border-radius: $radius-sm;
 
     svg{
         display: flex;
-        object-fit: cover;
-        @include size(100%,100%);
-        @include padding(0.4rem);
+        @include size(24px,24px);
         color: $background;
     }
 }
 .sidebar__title-container{
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     @include size(100%, auto);
 
+    opacity: 1;
+    visibility: visible;
+
+    transition: opacity 0.3s ease;
+
     .sidebar__title{
         font-size: $font-18;
         font-weight: 600;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     .sidebar__subtitle{
         font-size: $font-12;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &.closed{
+        opacity: 0;
+        position: absolute;
+        visibility: hidden;
     }
 }
 
 
 .sidebar__menu-container{
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     display: flex;
     max-height: 1000px;
     @include size(100%,100%);
@@ -131,6 +170,11 @@
         font-size: $font-16;
         font-weight: 500;
 
+        opacity: 1;
+        visibility: visible;
+
+        transition: justify-content 0.3s ease;
+
         .sidebar__icon{
             line-height: 0;
         }
@@ -139,6 +183,21 @@
             display: flex;
             line-height: 1;
             @include justify-align(flex-start,center);
+
+            opacity: 1;
+            visibility: visible;
+
+            transition: opacity 0.3s ease;
+
+            &.closed{
+                opacity: 0;
+                visibility: hidden;
+                position: absolute;
+            }
+        }
+
+        &.closed{
+            @include justify-align(center,center);
         }
     }
 
@@ -183,7 +242,7 @@
         display: flex;
         @include size(100%,auto);
         @include justify-align(center,center);
-        @include padding(0.5rem,0.5rem); 
+        @include padding(0.6rem); 
         gap: 0.5rem;
 
         background-color: $text;
@@ -191,17 +250,32 @@
         border: none;
         border-radius: $radius-sm;
 
-        @include font-changa;
-        text-transform: uppercase;
-        font-size: $font-16;
-
         cursor: pointer;
 
         svg{
             display: flex;
             object-fit: cover;
-            @include size($font-16,$font-16);
+            @include size($font-18,$font-18);
             color: $background;
         }
     }
+
+    #sidebar-btn-logout-text{
+        @include font-changa;
+        text-transform: uppercase;
+        font-size: $font-16;
+        line-height: 0;
+
+        opacity: 1;
+        visibility: visible;
+
+        transition: opacity 0.3s ease;
+
+        &.closed{
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+        }
+    }
+    
 }
