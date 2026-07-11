@@ -1,0 +1,129 @@
+@use "../abstracts/colores" as *;
+@use "../abstracts/gradientes" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/tipografias" as *;
+@use "../abstracts/variables" as *;
+
+#home-hero{
+    display: flex;
+    @include size(100%,auto);
+    @include padding(10vh,0,0,100px);
+    @include justify-align(center,center);
+}
+
+#home-hero-container{
+    display: flex;
+    flex-direction: column;
+    @include size(50%,auto);
+    width: clamp(250px, 60vw, 800px);
+    @include justify-align(none,center);
+
+    gap: 1rem;
+
+    .home-hero__banner{
+        display: flex;
+        @include justify-align(none,center);
+        @include size(100%,180px);
+        max-height: 180px;
+
+        @include padding(1rem);
+        gap: 1rem;
+
+        color: $text;
+
+        @include linear-gradient(120deg, #C680FF, #7e08df);
+        border-radius: $radius-lg;
+        @include shadow(0, 0, 10px, 0, rgba(0, 0, 0, .10));
+
+
+        .home-hero__image-container{
+            display: flex;
+            @include justify-align(none,center);
+            @include size(180px,100%);
+            min-width: 180px;
+            max-width: 180px;
+
+            img{
+                object-fit: contain;
+                @include size(100%,100%);
+            }
+        }
+
+        .home-hero__content{
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            @include size(100%,auto);
+
+            @media (max-width: 768px) {  
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 768px) {  
+            flex-direction: column;  
+            @include size(100%, auto);
+            max-height: none;
+            gap: 0.5rem;
+        }
+    }
+
+}
+
+
+.home-hero__title{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @include font-montserrat;
+    font-size: $font-22;
+    font-weight: 600;
+    
+    line-height: 2;
+
+    @media (max-width: 768px) {  
+        font-size: $font-20;
+        font-weight: 500;
+    }
+}
+
+.home-hero__description{
+    font-size: $font-18;
+    font-weight: 400;
+
+    @include font-montserrat;
+
+    @media (max-width: 768px) {  
+        font-size: $font-16;
+        font-weight: 400;
+    }
+}
+
+.home-hero__actions{
+    display: flex;
+    @include justify-align(none,center);
+    @include size(100%,100px);
+    max-height: 100px;
+    gap: 1rem;
+
+    .home-hero__action{
+        display: flex;
+        flex-direction: column;
+        @include size(100%,100px);
+        @include justify-align(center,none);
+
+        @include padding(1rem);
+
+        @include linear-gradient(120deg, #C680FF, #7e08df);
+        border-radius: $radius-lg;
+        @include shadow(0, 0, 10px, 0, rgba(0, 0, 0, .10));
+
+        @include font-montserrat;
+        text-transform: capitalize;
+        color: $text;
+    }
+    #btn-second-action{
+        font-size: $font-16;
+    }
+}

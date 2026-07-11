@@ -13,7 +13,7 @@ body{
     z-index: 1000px;
     display: flex;
     @include size(100vw, 10vh);
-    @include padding(0,1rem,0,15vh);
+    @include padding(0,1rem,0,100px);
 
     background-color: $background;
     border-bottom: 1px solid $text;
@@ -40,6 +40,15 @@ body{
         .header-page-title.location{
             text-decoration:underline;
         }
+
+        @media (max-width: 768px) {    
+            display: none;
+        }
+    }
+
+    @media (max-width: 768px) {    
+        @include justify-align(flex-end,center);
+          @include padding(0,0,0,0);
     }
    
 }
@@ -59,6 +68,10 @@ body{
     @include size(flex-end,center);
     @include padding(0.3rem,1rem);
     gap: 20px;
+
+    @media (max-width: 768px) {    
+        @include padding(0.2rem);
+    }
 }
 
 .header__balance{
@@ -100,6 +113,7 @@ body{
 
         cursor: pointer;
     }
+
 }
 
 

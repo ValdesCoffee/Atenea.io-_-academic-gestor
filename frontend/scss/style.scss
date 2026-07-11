@@ -13,7 +13,6 @@
 
 @use "loyout/header";
 @use "loyout/sidebar";
-@use "loyout/welcome-hero";
 
 @use "pages/login";
 @use "pages/home";
@@ -28,3 +27,4 @@
         box-sizing: border-box;
     }
 }
+
